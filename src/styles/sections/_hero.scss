@@ -44,6 +44,36 @@
     max-width: 780px;
   }
 
+  // Entrance animation: stagger children of .hero__content
+  $hero-anim-dur: 600ms;
+  $hero-anim-ease: cubic-bezier(0.16, 1, 0.3, 1);
+
+  @keyframes heroFadeUp {
+    from { opacity: 0; transform: translateY(12px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero__content > * {
+    opacity: 0;
+    transform: translateY(12px);
+    animation: heroFadeUp $hero-anim-dur $hero-anim-ease both;
+    animation-delay: var(--a-delay, 0ms);
+  }
+
+  .hero__badge { --a-delay: 0ms; }
+  .hero__title { --a-delay: 120ms; }
+  .hero__subtitle { --a-delay: 240ms; }
+  .hero__actions { --a-delay: 360ms; }
+  .hero__stats { --a-delay: 480ms; }
+
+  @media (prefers-reduced-motion: reduce) {
+    .hero__content > * {
+      animation: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
   &__badge {
     display: inline-flex;
     align-items: center;
