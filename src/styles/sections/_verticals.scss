@@ -1,0 +1,76 @@
+.verticals {
+  background: $bg-0;
+  padding: $section-padding;
+
+  &__grid {
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+  }
+
+  &__card {
+    background: $bg-card;
+    border: 1px solid $b0;
+    border-radius: $r-l;
+    padding: 30px 24px;
+    transition: $tm;
+    overflow: hidden;
+    position: relative;
+
+    &:hover {
+      background: $bg-card-hover;
+      border-color: $border-gold;
+      transform: translateY(-7px);
+      box-shadow: 0 22px 55px rgba(0,0,0,0.32);
+    }
+
+    &:hover::after {
+      transform: scaleX(1);
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, $gold 0%, $gold-light 100%);
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform $tm;
+      pointer-events: none;
+      border-radius: $r-l;
+    }
+  }
+
+  &__emoji {
+    font-size: 1.9rem;
+    margin-bottom: 14px;
+  }
+
+  &__name {
+    font-family: $font-head;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 9px;
+  }
+
+  &__desc {
+    font-size: 0.83rem;
+    color: $t2;
+    line-height: 1.62;
+  }
+
+  &__tag {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 3px 10px;
+    background: $gold-dim;
+    color: $gold;
+    font-size: 0.69rem;
+    font-weight: 700;
+    border-radius: 50px;
+  }
+}

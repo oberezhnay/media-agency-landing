@@ -1,23 +1,572 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <!-- <link rel="stylesheet" href="/src/scss/main.scss" /> -->
-  <!-- <script type="module" src="/src/main.js"></script> -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Media Agency Landing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles/main.scss" />
 </head>
+
 <body>
-  <header class="header"></header>
 
-  <main>
-    <section id="hero" class="hero">1</section>
-    <section id="services" class="services">2</section>
-    <section id="cases" class="cases">3</section>
-    <section id="about" class="about">4</section>
-    <section id="contact" class="contact">5</section>
-  </main>
+  <!-- ========================= HEADER ========================= -->
+  <header class="header" id="header">
+    <div class="header__inner">
 
-  <footer class="footer"></footer>
+      <a href="/" class="header__logo">
+        <span class="header__logo-mark">RM</span>
+        <span class="header__logo-text">Rhine <span>Media</span></span>
+      </a>
+
+      <nav class="header__nav">
+        <ul class="header__nav-list">
+          <li><a href="#verticals">Verticals</a></li>
+          <li><a href="#traffic">Traffic Sources</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#why-us">Why Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <a href="contact.html" class="btn btn--ghost">Get in Touch</a>
+        <a href="contact.html" class="btn btn--primary">Start Cooperation</a>
+
+        <button class="header__burger" id="burger">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile menu -->
+    <div class="header__mobile" id="mobileMenu">
+      <button class="header__mobile-close" id="mobileClose">✕</button>
+
+      <nav class="header__mobile-nav">
+        <a href="#verticals">Verticals</a>
+        <a href="#traffic">Traffic Sources</a>
+        <a href="#partners">Partners</a>
+        <a href="#why-us">Why Us</a>
+        <a href="contact.html">Contact</a>
+        <a href="contact.html" class="btn btn--primary">Start Cooperation</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- ========================= HERO ========================= -->
+  <section class="hero">
+
+    <!-- Background decorations -->
+    <div class="hero__grid"></div>
+    <div class="hero__orb hero__orb--a"></div>
+    <div class="hero__orb hero__orb--b"></div>
+    <div class="hero__orb hero__orb--c"></div>
+
+    <div class="hero__rings"></div>
+
+    <div class="container">
+      <div class="hero__content">
+        <div class="hero__badge">
+        <span class="hero__badge-dot"></span>
+          Performance Media Buying Team
+        </div>
+
+        <h1 class="hero__title">
+          <span>Performance Media</span>
+          <span>Buying Team | <span class="text-gold">Rhine Media</span></span>
+        </h1>
+
+        <p class="hero__subtitle">
+          We buy traffic for <strong>Dating, Nutra, Gambling, Sweepstakes, iGaming</strong>
+          and more — across all major channels, in every major GEO, at premium scale.
+        </p>
+
+        <div class="hero__actions">
+          <a href="contact.html" class="btn btn--primary">
+            Start Cooperation
+          </a>
+          <a href="contact.html" class="btn btn--ghost">Get in Touch</a>
+        </div>
+
+        <div class="hero__stats">
+          <div class="hero__stat">
+            <span class="hero__stat-value">$12M+</span>
+            <span class="hero__stat-label">Monthly Ad Spend</span>
+          </div>
+
+          <div class="hero__stat">
+            <span class="hero__stat-value">340%</span>
+            <span class="hero__stat-label">Average Campaign ROI</span>
+          </div>
+
+          <div class="hero__stat">
+            <span class="hero__stat-value">8+</span>
+            <span class="hero__stat-label">Traffic Channels</span>
+          </div>
+
+          <div class="hero__stat">
+            <span class="hero__stat-value">60+</span>
+            <span class="hero__stat-label">GEOs Worldwide</span>
+          </div>
+        </div>
+      </div>
+      
+
+    </div>
+  </section>
+
+
+  <!-- ========================= STATS BAND ========================= -->
+  <section class="stats">
+    <div class="container stats__grid">
+
+      <div class="stats__item">
+        <span class="stats__value">4.2B+</span>
+        <span class="stats__label">Ad Impressions / Month</span>
+        <span class="stats__sub">Across all traffic sources</span>
+      </div>
+
+      <div class="stats__item">
+        <span class="stats__value">340%</span>
+        <span class="stats__label">Average ROI</span>
+        <span class="stats__sub">Verified by partners</span>
+      </div>
+
+      <div class="stats__item">
+        <span class="stats__value">7</span>
+        <span class="stats__label">Verticals Mastered</span>
+        <span class="stats__sub">Dating, Nutra, Gambling & more</span>
+      </div>
+
+      <div class="stats__item">
+        <span class="stats__value">60+</span>
+        <span class="stats__label">Global GEOs</span>
+        <span class="stats__sub">Tier‑1 & emerging markets</span>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================= VERTICALS ========================= -->
+  <section class="verticals" id="verticals">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="section-head__eyebrow">Our Verticals</span>
+        <h2 class="section-head__title">
+          Niches We <span class="text-gold">Dominate</span>
+        </h2>
+        <p class="section-head__subtitle">
+          Deep expertise across the highest-performing verticals in performance marketing.
+        </p>
+      </div>
+
+      <div class="verticals__grid">
+
+        <article class="verticals__card">
+          <span class="verticals__emoji">💘</span>
+          <h3 class="verticals__name">Dating</h3>
+          <p class="verticals__desc">
+            Mainstream & adult dating campaigns. SOI, DOI and trial offers across tier‑1 GEOs with proven funnels.
+          </p>
+          <span class="verticals__tag">High Volume</span>
+        </article>
+
+        <article class="verticals__card">
+          <span class="verticals__emoji">💊</span>
+          <h3 class="verticals__name">Nutra</h3>
+          <p class="verticals__desc">
+            Weight loss, supplements, skincare. Native & push traffic specialization with compliant creatives.
+          </p>
+          <span class="verticals__tag">Premium GEOs</span>
+        </article>
+
+        <article class="verticals__card">
+          <span class="verticals__emoji">🎰</span>
+          <h3 class="verticals__name">Gambling</h3>
+          <p class="verticals__desc">
+            Online casino, sports betting, poker. FTD‑focused funnels with high player LTV and retention.
+          </p>
+          <span class="verticals__tag">Top ROI</span>
+        </article>
+
+        <article class="verticals__card">
+          <span class="verticals__emoji">🔞</span>
+          <h3 class="verticals__name">Adult</h3>
+          <p class="verticals__desc">
+            Adult content & services. Compliant campaigns via premium adult traffic networks at scale.
+          </p>
+          <span class="verticals__tag">Specialized</span>
+        </article>
+
+        <article class="verticals__card">
+          <span class="verticals__emoji">🎁</span>
+          <h3 class="verticals__name">Sweepstakes</h3>
+          <p class="verticals__desc">
+            CC‑submit & SOI sweeps. Push, pop and display traffic with high conversion rates globally.
+          </p>
+          <span class="verticals__tag">Mass Scale</span>
+        </article>
+
+        <article class="verticals__card">
+          <span class="verticals__emoji">₿</span>
+          <h3 class="verticals__name">Crypto Offers</h3>
+          <p class="verticals__desc">
+            Crypto trading platforms, wallets and exchange offers. FTD & CPA models in regulated GEOs.
+          </p>
+          <span class="verticals__tag">Emerging</span>
+        </article>
+
+        <article class="verticals__card">
+          <span class="verticals__emoji">📱</span>
+          <h3 class="verticals__name">Mainstream</h3>
+          <p class="verticals__desc">
+            App installs, e‑commerce, utilities. Google, Meta and TikTok performance campaigns at scale.
+          </p>
+          <span class="verticals__tag">Versatile</span>
+        </article>
+
+        <article class="verticals__card">
+          <span class="verticals__emoji">🎮</span>
+          <h3 class="verticals__name">iGaming</h3>
+          <p class="verticals__desc">
+            Fantasy sports, esports betting and skill‑based gaming platforms. Fast‑growing vertical expertise.
+          </p>
+          <span class="verticals__tag">Fast Growth</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================= TRAFFIC SOURCES ========================= -->
+  <section class="traffic" id="traffic">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="section-head__eyebrow">Traffic Sources We Master</span>
+        <h2 class="section-head__title">
+          Every Major <span class="text-blue">Channel</span>
+        </h2>
+        <p class="section-head__subtitle">
+          Full-stack traffic expertise across paid, native, push and programmatic channels worldwide.
+        </p>
+      </div>
+
+      <div class="traffic__grid">
+
+        <article class="traffic__card">
+          <div class="traffic__icon">🚀</div>
+          <h3 class="traffic__name">PropellerAds</h3>
+          <p class="traffic__sub">Push / Pop / OnClick</p>
+        </article>
+
+        <article class="traffic__card">
+          <div class="traffic__icon">🔍</div>
+          <h3 class="traffic__name">Google Ads</h3>
+          <p class="traffic__sub">Search / Display / YouTube</p>
+        </article>
+
+        <article class="traffic__card">
+          <div class="traffic__icon">🍎</div>
+          <h3 class="traffic__name">Apple Search Ads</h3>
+          <p class="traffic__sub">iOS App Install</p>
+        </article>
+
+        <article class="traffic__card">
+          <div class="traffic__icon">📘</div>
+          <h3 class="traffic__name">Meta Ads</h3>
+          <p class="traffic__sub">Facebook / Instagram</p>
+        </article>
+
+        <article class="traffic__card">
+          <div class="traffic__icon">🎵</div>
+          <h3 class="traffic__name">TikTok Ads</h3>
+          <p class="traffic__sub">In-Feed / TopView / Spark</p>
+        </article>
+
+        <article class="traffic__card">
+          <div class="traffic__icon">📰</div>
+          <h3 class="traffic__name">Native Ads</h3>
+          <p class="traffic__sub">Taboola / Outbrain</p>
+        </article>
+
+        <article class="traffic__card">
+          <div class="traffic__icon">🔔</div>
+          <h3 class="traffic__name">Push Notifications</h3>
+          <p class="traffic__sub">Web & In-App Push</p>
+        </article>
+
+        <article class="traffic__card">
+          <div class="traffic__icon">💥</div>
+          <h3 class="traffic__name">Pop Traffic</h3>
+          <p class="traffic__sub">Popunder / Interstitial</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================= PARTNERS ========================= -->
+  <section class="partners" id="partners">
+    <div class="container">
+
+      <div class="section-head">
+        <span class="section-head__eyebrow">Trusted Partners & Networks</span>
+        <h2 class="section-head__title">
+          Working with the <span class="text-gold">Best in Class</span>
+        </h2>
+        <p class="section-head__subtitle">
+          We maintain direct relationships with premium ad networks, affiliate networks and CPA platforms worldwide.
+        </p>
+      </div>
+
+    </div>
+
+    <div class="partners__marquee">
+      <div class="partners__track">
+
+        <!-- repeated chips for infinite scroll -->
+        <div class="partners__chip"><span class="partners__icon">🌐</span>Ads.com</div>
+        <div class="partners__chip"><span class="partners__icon">⚡</span>Tonic</div>
+        <div class="partners__chip"><span class="partners__icon">🔭</span>Visymo</div>
+        <div class="partners__chip"><span class="partners__icon">💼</span>ClickDealer</div>
+        <div class="partners__chip"><span class="partners__icon">🏅</span>VortexHub</div>
+        <div class="partners__chip"><span class="partners__icon">🎯</span>AdVance Pro</div>
+        <div class="partners__chip"><span class="partners__icon">💎</span>PeakNet CPA</div>
+        <div class="partners__chip"><span class="partners__icon">🔗</span>LynkAffiliates</div>
+        <div class="partners__chip"><span class="partners__icon">🚀</span>FluxMedia</div>
+        <div class="partners__chip"><span class="partners__icon">🌟</span>NorthStar Network</div>
+        <div class="partners__chip"><span class="partners__icon">📊</span>Affiliate Networks</div>
+        <div class="partners__chip"><span class="partners__icon">🤝</span>CPA Networks</div>
+
+        <!-- duplicate set -->
+        <div class="partners__chip"><span class="partners__icon">🌐</span>Ads.com</div>
+        <div class="partners__chip"><span class="partners__icon">⚡</span>Tonic</div>
+        <div class="partners__chip"><span class="partners__icon">🔭</span>Visymo</div>
+        <div class="partners__chip"><span class="partners__icon">💼</span>ClickDealer</div>
+        <div class="partners__chip"><span class="partners__icon">🏅</span>VortexHub</div>
+        <div class="partners__chip"><span class="partners__icon">🎯</span>AdVance Pro</div>
+        <div class="partners__chip"><span class="partners__icon">💎</span>PeakNet CPA</div>
+        <div class="partners__chip"><span class="partners__icon">🔗</span>LynkAffiliates</div>
+        <div class="partners__chip"><span class="partners__icon">🚀</span>FluxMedia</div>
+        <div class="partners__chip"><span class="partners__icon">🌟</span>NorthStar Network</div>
+        <div class="partners__chip"><span class="partners__icon">📊</span>Affiliate Networks</div>
+        <div class="partners__chip"><span class="partners__icon">🤝</span>CPA Networks</div>
+
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================= FEATURES ========================= -->
+  <section class="features" id="why-us">
+    <div class="container features__layout">
+
+      <div class="features__content">
+
+        <span class="section-head__eyebrow">Why Choose Rhine Media</span>
+
+        <h2 class="section-head__title">
+          Precision. Scale.<br><span class="text-gold">Performance.</span>
+        </h2>
+
+        <p class="section-head__subtitle">
+          We're not a media network — we're your in-house buying team. Deep expertise,
+          real accountability and transparent reporting on every dollar spent.
+        </p>
+
+        <ul class="features__list">
+
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            <div>
+              <h4 class="features__item-title">Full Funnel Optimization</h4>
+              <p class="features__item-text">
+                From creative A/B testing to post-click optimization. Every touchpoint tracked and improved.
+              </p>
+            </div>
+          </li>
+
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            <div>
+              <h4 class="features__item-title">Direct Publisher Relationships</h4>
+              <p class="features__item-text">
+                We maintain direct deals with top publishers and ad networks — cutting costs and boosting performance.
+              </p>
+            </div>
+          </li>
+
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            <div>
+              <h4 class="features__item-title">Real-Time Reporting Dashboards</h4>
+              <p class="features__item-text">
+                Live dashboards with transparency on spend, impressions, conversions and revenue attribution.
+              </p>
+            </div>
+          </li>
+
+          <li class="features__item">
+            <span class="features__check">✓</span>
+            <div>
+              <h4 class="features__item-title">Dedicated Account Manager</h4>
+              <p class="features__item-text">
+                Direct communication via Telegram/Skype. No queues, no delays.
+              </p>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+
+      <div class="features__cards">
+
+        <article class="features__card">
+          <div class="features__card-icon">📈</div>
+          <h4 class="features__card-title">Data-Driven Buying</h4>
+          <p class="features__card-text">
+            Bidding strategies informed by real conversion data. No guesswork — pure performance logic.
+          </p>
+        </article>
+
+        <article class="features__card">
+          <div class="features__card-icon">🛡️</div>
+          <h4 class="features__card-title">Brand-Safe Traffic</h4>
+          <p class="features__card-text">
+            Custom placement lists and exclusions to protect your brand.
+          </p>
+        </article>
+
+        <article class="features__card">
+          <div class="features__card-icon">🌍</div>
+          <h4 class="features__card-title">Global GEO Coverage</h4>
+          <p class="features__card-text">
+            Tier‑1, LATAM, APAC and MENA — instant scaling infrastructure.
+          </p>
+        </article>
+
+        <article class="features__card">
+          <div class="features__card-icon">⚡</div>
+          <h4 class="features__card-title">48h Campaign Launch</h4>
+          <p class="features__card-text">
+            From brief to live in under 48 hours.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================= CTA ========================= -->
+  <section class="cta">
+    <div class="container">
+
+      <div class="cta__box">
+        <span class="section-head__eyebrow section-head__eyebrow--center">Let's Scale Together</span>
+
+        <h2 class="cta__title">
+          Ready to <span class="text-gold">Maximize</span> Your ROI?
+        </h2>
+
+        <p class="cta__text">
+          Join the brands and affiliate partners who trust Rhine Media to deliver performance at scale.
+        </p>
+
+        <div class="cta__actions">
+          <a href="contact.html" class="btn btn--primary">Start Cooperation</a>
+          <a href="contact.html" class="btn btn--outline">Get in Touch</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ========================= FOOTER ========================= -->
+  <footer class="footer">
+    <div class="container">
+
+      <div class="footer__cols">
+
+        <div class="footer__brand">
+          <a href="/" class="footer__logo">
+            <span class="footer__logo-mark">RM</span>
+            <span class="footer__logo-text">Rhine <span>Media</span></span>
+          </a>
+
+          <p class="footer__desc">
+            Premium performance media buying for ambitious advertisers and affiliate partners.
+          </p>
+
+          <div class="footer__social">
+            <a href="#" class="footer__social-btn">✈</a>
+            <a href="#" class="footer__social-btn">in</a>
+            <a href="#" class="footer__social-btn">𝕏</a>
+            <a href="#" class="footer__social-btn">☁</a>
+          </div>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Verticals</h4>
+          <ul class="footer__links">
+            <li><a href="#verticals">Dating Traffic</a></li>
+            <li><a href="#verticals">Nutra Campaigns</a></li>
+            <li><a href="#verticals">Gambling / iGaming</a></li>
+            <li><a href="#verticals">Sweepstakes</a></li>
+            <li><a href="#verticals">Crypto Offers</a></li>
+            <li><a href="#verticals">Adult</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Traffic Sources</h4>
+          <ul class="footer__links">
+            <li><a href="#traffic">Google Ads</a></li>
+            <li><a href="#traffic">Meta Ads</a></li>
+            <li><a href="#traffic">TikTok Ads</a></li>
+            <li><a href="#traffic">PropellerAds</a></li>
+            <li><a href="#traffic">Native Ads</a></li>
+            <li><a href="#traffic">Push & Pop</a></li>
+          </ul>
+        </div>
+
+        <div class="footer__col">
+          <h4 class="footer__col-title">Company</h4>
+          <ul class="footer__links">
+            <li><a href="#why-us">About Rhine Media</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="#partners">Partners</a></li>
+            <li><a href="terms.html">Terms of Service</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copy">© 2026 Rhine Media. All rights reserved.</p>
+
+        <nav class="footer__legal">
+          <a href="terms.html">Terms</a>
+          <a href="privacy-policy.html">Privacy</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+
+    </div>
+  </footer>
+  
+  <script type="module" src="/src/scripts/main.js"></script>
 </body>
 </html>

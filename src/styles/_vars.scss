@@ -1,0 +1,50 @@
+// $bp-xl: 1100px;
+// $bp-lg: 960px;
+// $bp-md: 768px;
+// $bp-sm: 540px;
+
+// Colors
+$bg-0: #05070E;
+$bg-1: #080C18;
+$bg-2: #0C1120;
+$bg-card: #101826;
+$bg-card-hover: #141F30;
+
+$gold: #C9973B;
+$gold-light: #E6B85C;
+$gold-dim: rgba(201, 151, 59, 0.12);
+$gold-glow: rgba(201, 151, 59, 0.25);
+$border-gold: rgba(201, 151, 59, 0.28);
+$--g-gold: linear-gradient(90deg, #C9973B 0%, #E6B85C 100%);
+
+$blue: #3E72EC;
+$blue-light: #6090FF;
+$blue-dim: rgba(62, 114, 236, 0.12);
+
+// Text
+$t1: #EDF0FA;
+$t2: #8892AE;
+$t3: #4E5770;
+
+// Borders
+$b0: rgba(255,255,255,0.04);
+$b1: rgba(255,255,255,0.08);
+
+$font-head: 'Manrope', sans-serif;
+$font-body: 'Inter', sans-serif;
+
+// Layout
+$container-max: 1240px;
+$container-padding: 24px;
+$section-padding: 110px 0;
+
+// Radius
+$r-s: 8px;
+$r-m: 14px;
+$r-l: 20px;
+$r-xl: 28px;
+
+// Transitions
+$ease: cubic-bezier(0.16, 1, 0.3, 1);
+$tf: 0.2s $ease;
+$tm: 0.45s $ease;

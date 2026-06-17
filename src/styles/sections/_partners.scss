@@ -1,0 +1,52 @@
+.partners {
+  background: $bg-0;
+  padding: 88px 0;
+
+  &__marquee {
+    margin-top: 44px;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg, transparent 0%, black 12%, black 88%, transparent 100%);
+  }
+
+  &__track {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: scroll 32s linear infinite;
+
+    &:hover {
+      animation-play-state: paused;
+    }
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+
+  &__chip {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 11px 20px;
+    background: $bg-card;
+    border: 1px solid $b0;
+    border-radius: 50px;
+    white-space: nowrap;
+    transition: $tf;
+
+    &:hover {
+      border-color: $border-gold;
+      background: $bg-card-hover;
+    }
+  }
+
+  &__icon {
+    width: 22px;
+    height: 22px;
+    background: $gold-dim;
+    border-radius: 5px;
+    @include flex-center;
+    font-size: 0.75rem;
+  }
+}

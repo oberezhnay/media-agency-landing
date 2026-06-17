@@ -1,0 +1,140 @@
+.header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: 22px 0;
+  z-index: 900;
+  transition: $tm;
+  border-bottom: 1px solid transparent;
+
+  &__inner {
+    @include container;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &-mark {
+      width: 36px;
+      height: 36px;
+      border-radius: 9px;
+      background: linear-gradient(90deg, $gold 0%, $gold-light 100%);
+      @include flex-center;
+      font-weight: 900;
+      color: #120d00;
+    }
+
+    &-text {
+      font-family: $font-head;
+      font-weight: 800;
+      font-size: 1.15rem;
+
+      span {
+        color: $gold;
+      }
+    }
+  }
+
+  &__nav-list {
+    display: flex;
+    gap: 30px;
+
+    a {
+      color: $t2;
+      font-size: 0.85rem;
+      transition: $tf;
+
+      &:hover {
+        color: $t1;
+      }
+    }
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__burger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+
+    span {
+      width: 22px;
+      height: 2px;
+      background: $t1;
+      border-radius: 2px;
+    }
+  }
+
+  // Mobile menu
+  &__mobile {
+    @include flex-center;
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: $bg-0;
+    z-index: 850;
+    flex-direction: column;
+    gap: 26px;
+
+    &.open {
+      display: flex;
+    }
+
+    &-close {
+      position: absolute;
+      top: 22px;
+      right: 22px;
+      font-size: 1.4rem;
+      color: $t2;
+    }
+
+    a {
+      font-family: $font-head;
+      font-size: 1.6rem;
+      color: $t1;
+
+      &:hover {
+        color: $gold;
+      }
+    }
+  }
+
+  @include respond(768px) {
+    &__nav-list {
+      display: none;
+    }
+
+    &__burger {
+      display: flex !important;
+    }
+    &__actions {
+      .btn--ghost {
+        display: none !important;
+      }
+      .btn--primary {
+        order: 1;
+      }
+      .header__burger {
+        order: 2;
+        margin-left: 8px;
+      }
+    }
+  }
+}
+
+
+.header.scrolled {
+  background: rgba(5, 7, 14, 0.88);
+  backdrop-filter: blur(22px);
+  -webkit-backdrop-filter: blur(22px);
+  padding: 14px 0;
+  border-bottom-color: rgba(255, 255, 255, 0.04);
+}

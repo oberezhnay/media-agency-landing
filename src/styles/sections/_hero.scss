@@ -1,0 +1,127 @@
+.hero {
+  position: relative;
+  min-height: 100vh;
+  padding: 120px 0 60px;
+  display: flex;
+  align-items: center;
+
+  &__grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba($blue, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba($blue, 0.035) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  &__orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(90px);
+
+    &--a {
+      width: 680px; height: 680px;
+      background: radial-gradient(circle, rgba(30,65,170,0.22), transparent 68%);
+      top: -220px; right: -160px;
+    }
+
+    &--b {
+      width: 420px; height: 420px;
+      background: radial-gradient(circle, rgba($gold, 0.10), transparent 70%);
+      bottom: 80px; left: 5%;
+    }
+
+    &--c {
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba($blue, 0.12), transparent 70%);
+      top: 50%; left: 38%;
+    }
+  }
+
+  &__content {
+    position: relative;
+    z-index: 2;
+    max-width: 780px;
+  }
+
+  &__badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    padding: 7px 16px;
+    background: $gold-dim;
+    border: 1px solid $border-gold;
+    border-radius: 50px;
+    color: $gold;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    &-dot {
+      width: 7px;
+      height: 7px;
+      background: $gold;
+      border-radius: 50%;
+    }
+  }
+
+  &__title {
+    font-family: $font-head;
+    font-size: clamp(2.7rem, 5.5vw, 5rem);
+    font-weight: 800;
+    margin-bottom: 26px;
+
+    .text-gold {
+      background: linear-gradient(120deg, $gold 0%, $gold-light 45%, $gold 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  &__subtitle {
+    font-size: clamp(1rem, 1.8vw, 1.15rem);
+    color: $t2;
+    max-width: 580px;
+    margin-bottom: 42px;
+
+    strong {
+      color: $t1;
+    }
+  }
+
+  &__actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 56px;
+  }
+
+  &__stats {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 36px;
+    padding-top: 36px;
+    border-top: 1px solid $b0;
+  }
+
+  &__stat {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+
+    &-value {
+      font-family: $font-head;
+      font-size: 1.75rem;
+      font-weight: 800;
+      background: linear-gradient(90deg, $gold 0%, $gold-light 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    &-label {
+      font-size: 0.78rem;
+      color: $t3;
+    }
+  }
+}

@@ -1,0 +1,139 @@
+@import 'vars';
+@import 'mixins';
+@import 'reset';
+@import 'sections/header';
+@import 'sections/hero';
+@import 'sections/stats';
+@import 'sections/verticals';
+@import 'sections/traffic';
+@import 'sections/partners';
+@import 'sections/features';
+@import 'sections/cta';
+@import 'sections/footer';
+@import 'sections/contact';
+
+.container { 
+  @include container; 
+}
+.section { 
+  padding: $section-padding; 
+}
+
+// Buttons
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: $font-head;
+  font-weight: 700;
+  font-size: 0.875rem;
+  transition: $tf;
+}
+
+.btn--primary {
+  background: linear-gradient(90deg, $gold 0%, $gold-light 100%);
+  color: #150e00;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 14px 38px $gold-glow;
+  }
+}
+
+.btn--ghost {
+  border: 1px solid $b1;
+  color: $t1;
+
+  &:hover {
+    background: rgba(255,255,255,0.04);
+    border-color: $border-gold;
+    color: $gold-light;
+  }
+}
+
+.btn--outline {
+  border: 1.5px solid $border-gold;
+  color: $gold;
+
+  &:hover {
+    background: $gold-dim;
+  }
+}
+
+// Section headings
+.section-head {
+  text-align: center;
+  margin-bottom: 40px;
+
+  &__eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: $gold;
+    margin-bottom: 18px;
+
+    &::before {
+      content: '';
+      width: 18px;
+      height: 2px;
+      background: linear-gradient(90deg, $gold 0%, $gold-light 100%);
+      border-radius: 2px;
+    }
+  }
+
+  &__title {
+    font-family: $font-head;
+    font-size: clamp(1.85rem, 3.5vw, 2.75rem);
+    font-weight: 800;
+    margin-bottom: 18px;
+  }
+
+  &__subtitle {
+    max-width: 520px;
+    margin: 0 auto;
+    color: $t2;
+    line-height: 1.75;
+  }
+}
+
+@include respond(1100px) {
+  :root {
+    --sec-py: 76px;
+  }
+}
+
+@include respond(960px) {
+  .verticals__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .traffic__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .stats__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include respond(768px) {
+  .traffic__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@include respond(540px) {
+  .verticals__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .traffic__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

@@ -1,0 +1,144 @@
+.footer {
+  background: $bg-0;
+  border-top: 1px solid $b0;
+  padding: 72px 0 34px;
+
+  &__cols {
+    display: grid;
+    grid-template-columns: 1.9fr 1fr 1fr 1fr;
+    gap: 48px;
+    margin-bottom: 60px;
+
+    @include respond(1100px) {
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+    }
+
+    @include respond(768px) {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+  }
+
+  &__brand {
+    max-width: 260px;
+  }
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    &-mark {
+      width: 36px;
+      height: 36px;
+      background: linear-gradient(90deg, $gold 0%, $gold-light 100%);
+      border-radius: 9px;
+      @include flex-center;
+      font-weight: 900;
+      color: #120d00;
+    }
+
+    &-text {
+      font-family: $font-head;
+      font-weight: 800;
+      font-size: 1.15rem;
+
+      span {
+        color: $gold;
+      }
+    }
+  }
+
+  &__desc {
+    font-size: 0.875rem;
+    color: $t2;
+    line-height: 1.72;
+    margin-top: 18px;
+  }
+
+  &__social {
+    display: flex;
+    gap: 9px;
+    margin-top: 26px;
+
+    &-btn {
+      width: 36px;
+      height: 36px;
+      background: $bg-card;
+      border: 1px solid $b0;
+      border-radius: 8px;
+      @include flex-center;
+      font-size: 0.85rem;
+      color: $t2;
+      transition: $tf;
+
+      &:hover {
+        border-color: $border-gold;
+        background: $gold-dim;
+        color: $gold;
+      }
+    }
+  }
+
+  /* Columns */
+  &__col-title {
+    font-family: $font-head;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: $t1;
+    margin-bottom: 20px;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+
+    a {
+      font-size: 0.865rem;
+      color: $t2;
+      transition: $tf;
+
+      &:hover {
+        color: $gold-light;
+      }
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid $b0;
+    padding-top: 28px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 12px;
+
+    @include respond(768px) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  &__copy {
+    font-size: 0.8rem;
+    color: $t3;
+  }
+
+  &__legal {
+    display: flex;
+    gap: 22px;
+
+    a {
+      font-size: 0.8rem;
+      color: $t3;
+      transition: $tf;
+
+      &:hover {
+        color: $t2;
+      }
+    }
+  }
+}
